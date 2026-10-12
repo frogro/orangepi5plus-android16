@@ -14,7 +14,7 @@ Versions read from the running system on 2026-10-13:
 | Build type | `userdebug`, signed with development `test-keys` |
 | Linux kernel | `6.18.55` |
 
-The build ID identifies the Android platform revision used by this image. The security patch date is the value reported by Android; it is not an independent verification of patch coverage across the kernel and vendor components. The kernel suffix is its build identifier; this image runs Android 16 for Orange Pi 5 Plus.
+The build ID identifies the Android platform revision used by this image. The security patch date is the value reported by Android; it is not an independent verification of patch coverage across the kernel and vendor components. 
 
 ## Video decoding and Wi-Fi
 
