@@ -4,7 +4,7 @@ This is a development repository for porting Android 16 to the Orange Pi 5 Plus 
 
 ## Android and kernel versions
 
-Versions read from the running tablet image on 2026-10-13:
+Versions read from the running system on 2026-10-13:
 
 | Component | Version |
 | --- | --- |
