@@ -18,7 +18,9 @@ The build ID identifies the Android platform revision used by this image. The se
 
 ## Video decoding and Wi-Fi
 
-The image includes the RK3588 V4L2 hardware-decoding stack and the updated decoder Device Tree configuration. Short tests on the preceding development installation confirmed hardware decoding through `rkvdec` for H.264 at 1920×1080, HEVC at 1280×720 and VP9 at 1280×720. These results do not establish 4K, sustained 60 fps, AV1 hardware decoding or secure DRM/HDCP support. The decoder modules load in the fresh image; playback regression tests on that clean installation are still pending.
+The image supports hardware-accelerated video decoding at HD, Full HD and up to **4K (3840×2160)** using the RK3588 V4L2 stack and `rkvdec`. **H.264 (AVC), H.265 (HEVC) and VP9** each passed a 4K/30 fps decode-only test on the fresh image, with all 300 frames decoded. Smooth ongoing playback is expected for compatible content, but sustained playback and 60 fps have not been validated. These tests do not verify 4K HDMI output or AV1 hardware decoding.
+
+Streaming quality also depends on the app, subscription, provider policies and device certification. Hardware decoding support alone does not guarantee HD or 4K access from a streaming service. **Widevine DRM is not included in this image**, and secure DRM decoding and HDCP support are not established; protected services may restrict quality or refuse playback.
 
 The installed Wi-Fi card uses a **Realtek RTL8852BE** chipset (PCI ID `10ec:b852`) with the Linux **`rtw89_8852be`** driver. The running image detects the card and exposes `wlan0`. This identifies the tested chipset, not a compatibility guarantee for other Wi-Fi cards; connection and throughput tests on the fresh image remain pending.
 
