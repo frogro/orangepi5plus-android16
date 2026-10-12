@@ -18,7 +18,9 @@ The build ID identifies the Android platform revision used by this image. The se
 
 ## Video decoding and Wi-Fi
 
-The image supports hardware-accelerated video decoding at HD, Full HD and up to **4K (3840×2160)** using the RK3588 V4L2 stack and `rkvdec`. **H.264 (AVC), H.265 (HEVC) and VP9** each passed a 4K/30 fps decode-only test on the fresh image, with all 300 frames decoded. Smooth ongoing playback is expected for compatible content, but sustained playback and 60 fps have not been validated. These tests do not verify 4K HDMI output or AV1 hardware decoding.
+The image supports hardware-accelerated video decoding at HD, Full HD and up to **4K (3840×2160)** using the RK3588 V4L2 stack: `rkvdec` for **H.264 (AVC), H.265 (HEVC) and VP9**, and `hantro-vpu` for **AV1**. All four codecs passed a 4K/30 fps decode-only test with all 300 frames decoded. The AV1-enabled media components were tested on the running development system before integration into this test image; the newly assembled image still needs a fresh-SD boot test. The optimized AV1 hardware path reached about **33.7 fps** in the short test. Its automatic software fallback passed an injected startup-failure test. Fallback after an error later in playback is not seamless. Smooth ongoing playback is expected for compatible content, but sustained playback and 60 fps have not been validated. These tests do not verify 4K HDMI output.
+
+See the [kernel provenance](docs/kernel-provenance.md) and [AV1 test notes](docs/av1-tests.md).
 
 Streaming quality also depends on the app, subscription, provider policies and device certification. Hardware decoding support alone does not guarantee HD or 4K access from a streaming service. **Widevine DRM is not included in this image**, and secure DRM decoding and HDCP support are not established; protected services may restrict quality or refuse playback.
 
