@@ -1,4 +1,4 @@
-# AV1 integration tests
+# Video decoding tests
 
 4K 3840x2160, 8-bit, 30 fps source clips, 300 frames each. Explicit Codec2 ByteBuffer decoding, no HDMI presentation or audio synchronization.
 
