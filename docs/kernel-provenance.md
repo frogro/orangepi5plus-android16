@@ -7,6 +7,7 @@ Linux 6.18.55 is reused unchanged; the Android image is not a Googlebook OS imag
 - Board-builder commit: `13b1c0924869c9c3e217a8fea93addd2f278a891`.
 - VyOS source/patch reference: `f5a1e8334f772225d9e3ccdab45f6884cec28e59`.
 - Kernel Image SHA256: `059021bb39dc29d71aa8a1d44facd6cfcfe11c4413f43001db9b5c0b5c718ad5`.
+- Build runner: `ubuntu-24.04-arm`; recorded compiler `gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0`, GNU assembler/linker 2.42.
 - Installed kernel release: `6.18.55-opi5plus-googlebook-native`.
 - Updated decoder DTB SHA256: `face014cf23b4d4d2dbdc922cee81f13050727586069a2e0f487707d8848f04d`.
 
