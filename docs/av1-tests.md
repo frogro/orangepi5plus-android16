@@ -15,4 +15,3 @@ Visible-plane SHA256 checksums of frames 1, 150 and 300 match their baselines; A
 
 Changes include the AV1 V4L2-request backend, read-only linear NV12 buffer mapping, faster NV12 conversion and bounded input replay for software fallback before the first hardware output. A later hardware failure is reported as an error; seamless midstream recovery is not implemented. 10-bit/HDR, film grain, seeking, long playback and 60 fps remain unvalidated. The AV1 codec XML advertises the tested 3840x2160 size in this candidate.
 
-Kernel rebuild is not required. The new signed media APEX and codec metadata are repacked into the clean image. Component tests do not substitute for a fresh-SD boot test of the final assembled image.
